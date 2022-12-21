@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <h2>Angular Image Upload Demo</h2>
+    <div class="file-upload">
+        <input type="file" name="document" ng2FileSelect [uploader]="uploader" accept="*" />
+        <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+            Upload
+        </button>
+    </div>
+    <h2>Télécharger</h2>
+    <button
+        (click)="downloadFile('http://localhost:3000/documents/Capture d’écran de 2022-12-06 10-33-34.png')">download</button>
+    <h2>Créer un fichier depusi le html</h2>
+
+    <button (click)="print()">Imprimer le document ci dessous :</button>
+
+    <div class="document_container">
+        <h1>Test d'impression</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et cumque adipisci sapiente asperiores impedit?
+            Neque, assumenda corrupti? Culpa a repellat aliquid debitis voluptates saepe asperiores non eveniet dolores!
+            Praesentium, quos?</p>
+    </div>
+</div>
